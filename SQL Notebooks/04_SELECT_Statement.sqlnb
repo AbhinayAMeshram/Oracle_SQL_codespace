@@ -4,17 +4,23 @@ cells:
       SELECT
       name
       FROM
-      custcmers;
+      CUSTOMERS;
     languageId: oracle-sql
+  - kind: 1
+    value: "## B) Querying data from multiple columns"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
       customer_id,
-      name
+      name,
       credit_limit
       FROM
       customers;
     languageId: oracle-sql
+  - kind: 1
+    value: "## C) Querying data from all columns of a table"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -29,9 +35,9 @@ cells:
   - kind: 2
     value: |
       SELECT
-      UPPER( 'This is a string')
+      UPPER('This is a string')
       From
-      what_table;
+      dual;
     languageId: oracle-sql
   - kind: 2
     value: SELECT * FROM dual;
@@ -46,23 +52,9 @@ cells:
   - kind: 2
     value: |
       SELECT
-      (10 + s)/2
+      (10 + 5)/2
       FROM
       dual;
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      column_1,
-      column_2,
-      column_3,
-      ...
-      FROM
-      table_nane
-      ORDER BY
-      column_1 [ASC I DESCJ [NULLS FIRST I NULLS LAST],
-      column_1 [ASC I DESC] [NULLS FIRST I NULLS LAST],
-      ...
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -116,7 +108,7 @@ cells:
     value: |
       SELECT
          name,
-         credi_limit
+         credit_limit
       FROM
          customers
       ORDER BY
@@ -138,7 +130,7 @@ cells:
   - kind: 2
     value: |
       SELECT
-          cenmtry_id,
+      country_id,
       city,
       state
       FROM
@@ -149,11 +141,11 @@ cells:
   - kind: 2
     value: |
       SELECT
-         country_id ,
+         country_id,
          city,
          state
       FROM
-         locatims
+         locations
       ORDER BY
          state
       ASC NULLS LAST;
@@ -166,7 +158,7 @@ cells:
       FROM
            customers
       ORDER BY
-      UPPER(name),
+      UPPER(name);
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -252,7 +244,7 @@ cells:
        From
           products
       WHERE
-          product_name = 'Kingstom';
+          product_name = 'Kingston';
     languageId: oracle-sql
   - kind: 2
     value: |
